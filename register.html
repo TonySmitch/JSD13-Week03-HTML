@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+</head>
+<body>
+
+    <h1>Register form</h1>
+
+    <form action="" method="GET" onsubmit="alert('ยืนยันการสมัคร')">
+        
+        <p>
+            <label for="username">ชื่อผู้ใช้: </label>
+            <input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้ของคุณ">
+        </p>
+
+        <p>
+            <label for="password">รหัสผ่าน: </label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                required
+                pattern=".{8,}" 
+                title="รหัสผ่านไม่ถูกต้อง! ต้องมีความยาวอย่างน้อย 8 ตัวอักษรขึ้นไป"
+            >
+        </p>
+
+        <p>
+            <label for="email">อีเมล: </label>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>เลือกแพ็กเกจ</p>
+        <p>
+            <label><input type="radio" name="package" value="free"> ฟรี (Free)</label>
+            <label><input type="radio" name="package" value="premium"> พรีเมียม (Premium)</label>
+        </p>
+
+        <p>ความสนใจ</p>
+        <p>
+            <label><input type="checkbox" name="interest" value="movie"> ดูหนัง</label>
+            <label><input type="checkbox" name="interest" value="music"> ฟังเพลง</label>
+            <label><input type="checkbox" name="interest" value="game"> เล่นเกม</label>
+        </p>
+
+        <p>
+            <input type="submit" value="ยืนยันการสมัคร">
+        </p>
+
+    </form>
+
+</body>
+</html>
